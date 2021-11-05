@@ -2,11 +2,11 @@ version: "3.9"
    
 services:
   satisfactory:
-    image: node:14-alpine
+    build: .
     user: node
-    working_dir: /home/node/app
+    working_dir: /app
     volumes:
-      - ./:/home/node/app
+      - ./:/app
     ports:
       - "80:80"
     command: "npm start"
