@@ -1,0 +1,14 @@
+version: "3.9"
+   
+services:
+  satisfactory:
+    image: node:14-alpine
+    user: node
+    working_dir: /home/node/app
+    volumes:
+      - ./:/home/node/app
+    ports:
+      - "80:80"
+    command: "npm start"
+    env_file:
+      - .env
