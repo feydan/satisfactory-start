@@ -21,5 +21,5 @@ while [ $isIdle -le 0 ]; do
     done
 done
 
-echo "No activity detected for $shutdownIdleMinutes, shutting down."
+echo "No activity detected for $shutdownIdleMinutes minutes, shutting down."
 sudo shutdown -h now
