@@ -6,7 +6,7 @@ idleCheckFrequencySeconds=1
 isIdle=0
 while [ $isIdle -le 0 ]; do
     isIdle=1
-    iterations=$(($idleCheckFrequencySeconds * 60 * $shutdownIdleMinutes))
+    iterations=$((60 / $idleCheckFrequencySeconds * $shutdownIdleMinutes))
     while [ $iterations -gt 0 ]; do
         sleep $idleCheckFrequencySeconds
         connectionBytes=$(ss -lu | grep 777 | awk -F ' ' '{s+=$2} END {print s}')
