@@ -1,6 +1,6 @@
 #!/bin/sh
 
-shutdownIdleMinutes=20
+shutdownIdleMinutes=30
 idleCheckFrequencySeconds=1
 
 isIdle=0
