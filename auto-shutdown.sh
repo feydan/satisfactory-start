@@ -17,7 +17,7 @@ while [ $isIdle -le 0 ]; do
            echo "Activity detected, resetting shutdown timer to $shutdownIdleMinutes minutes."
            break
         fi
-        iterations=$((iterations-1))
+        iterations=$(($iterations-1))
     done
 done
 
